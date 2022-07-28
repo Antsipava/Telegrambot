@@ -14,7 +14,7 @@
 #     print_hi('PyCharm')
 
 import telebot
-import random
+# import random
 import config
 from telebot import types
 # Загружаем список помещений
