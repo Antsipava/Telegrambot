@@ -40,7 +40,11 @@ def start(m, res=False):
         markup.add(item1)
         markup.add(item2)
         markup.add(item3)
+
+        bot.send_photo(m.chat.id, open('photo.jpg', 'rb')) # приветственная картинка
         bot.send_message(m.chat.id, 'Привет, я бот 2022, помогу, чем смогу \n Нажми: \nИщу свободное помещение  \nПоказать контакт управляющего зданием \nОтправить свой контакт ',  reply_markup=markup)
+
+
 # def star(message):
 #     mess = f'Need help?'
 #     bot.send_message(message.chat.id, mess)
@@ -67,7 +71,7 @@ def handle_text(message):
     elif message.text.strip() == 'Перезвоните мне':
             answer = geophone(message)
     else :
-        answer = bot.send_message('Кнопки чуть ниже чата, выбирите из предложенных') # если не выбрали кнопку
+        answer = 'Кнопка Меню чуть ниже чата, перезапустите бота' # если не выбрали кнопку
     # Отсылаем юзеру сообщение в его чат
     bot.send_message(message.chat.id, answer)
 
